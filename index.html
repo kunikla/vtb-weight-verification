@@ -1,0 +1,107 @@
+<html>
+<head>
+    <title>VTB Receiving | Count Verification</title>
+    <meta content="">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <style></style>
+</head>
+
+<body>
+
+<header class="nofloat">
+    <div class="logo">
+        <img src="https://www.vermontteddybear.com/skin/frontend/blueacorn/vtb/images/blueacorn/logo.png">
+    </div>
+    <div class="title">
+        <h1>Receiving | Count Verification</h1>
+    </div>
+    <div class="nofloat"></div>
+</header>
+
+<article class="nofloat">
+    <div class="product-data">
+        <form action="index2.html" method="post">
+            <div>
+                <label for="order">PO#: </label>
+                <input type="text" id="order" name="purchase-order">
+            </div>
+            <div>
+                <label for="paj">PAJ Code: </label>
+                <input type="text" id="paj" name="paj-code" value="PAJ">
+            </div>
+            <div>
+                <label for="full-box-weight">Weight of full box:</label>
+                <input type="text" id="full-box-weight" name="box-weight">
+            </div>
+            <div>
+                <label for="empty-box-weight">Weight of empty box:</label>
+                <input type="text" id="empty-box-weight" name="pkg-weight">
+            </div>
+            <div>
+                <label for="product-count">Count:</label>
+                <input type="text" id="product-count" name="p-count">
+            </div>
+            <div class="button">
+                <button type="submit">Calculate product weight</button>
+            </div>
+            <div>Weight of a single product: <span class="p-weight"></span></div>
+            <div>
+                <label for="deviation">Count:</label>
+                <input type="text" id="deviation" name="deviation">
+            </div>
+            <div class="button">
+                <button type="submit">Set/reset permitted deviation</button>
+            </div>
+        </form>
+    </div>
+    <div class="results">
+        <table>
+            <tr>
+                <th>PO #</th>
+                <th>PAJ Code</th>
+                <th>Date</th>
+            </tr>
+            <tr>
+                <td>00000</td>
+                <td>PAJ000000</td>
+                <td>1/1/2018</td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th>Box #</th>
+                <th>Count</th>
+                <th>Calculated<br>Weight</th>
+                <th>Measured<br>Weight</th>
+                <th>Deviation<br><span class="dev-pct">0%</span></th>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+        <form>
+            <div>Box #<span class="box-num">1</span></div>
+            <div>
+                <label for="this-box-count">Count</label>
+                <input type="text" id="this-box-count" name="b-count">
+            </div>
+            <div>
+                <label for="this-box-weight">Weight</label>
+                <input type="text" id="this-box-weight" name="b-weight">
+            </div>
+            <div class="button add-box">
+                <button type="submit">Add box</button>
+            </div>
+            <div class="button print-report">
+                <button type="submit">Print report</button>
+            </div>
+        </form>
+    </div>
+
+</article>
+</body>
+</html>
